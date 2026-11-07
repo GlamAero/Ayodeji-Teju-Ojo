@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Organize courses, assignments, and study tasks with Ayodeji Teju-Ojo's browser-based academic planner.">
+  <title>Academic Planner | Ayodeji Teju-Ojo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="project.html">Projects</a></li>
+      <li><a href="resume.html">Résumé</a></li><li><a class="active" href="academic_planner.html" aria-current="page">Planner</a></li>
+      <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    </ul>
+  </nav></header>
+  <main id="main">
+    <section class="page-hero container planner-hero">
+      <p class="eyebrow">YOUR STUDY SPACE</p><h1>Plan with <span>intention.</span></h1>
+      <p class="lead">Keep courses and study tasks together, see the next due date, and make a clear plan for your semester.</p>
+    </section>
+    <section class="section container">
+      <div class="planner-summary" aria-label="Planner summary">
+        <div><span class="eyebrow">OPEN TASKS</span><strong data-task-count aria-live="polite" aria-atomic="true">0</strong><span>to complete</span></div>
+        <div><span class="eyebrow">NEXT DEADLINE</span><strong data-next-deadline aria-live="polite" aria-atomic="true">Nothing scheduled</strong><span data-deadline-course>Add a task to get started</span></div>
+        <div><span class="eyebrow">YOUR COURSES</span><strong data-course-count aria-live="polite" aria-atomic="true">0</strong><span>in your planner</span></div>
+      </div>
+      <div class="planner-layout">
+        <section class="planner-panel" aria-labelledby="courses-heading">
+          <div class="panel-heading"><div><p class="eyebrow">YOUR SEMESTER</p><h2 id="courses-heading">Courses</h2></div></div>
+          <form class="inline-form" data-course-form>
+            <label class="sr-only" for="course-name">Course name</label>
+            <input id="course-name" name="course" required maxlength="70" placeholder="e.g. Introduction to Biology">
+            <button class="button" type="submit">Add course</button>
+          </form>
+          <ul class="course-list" data-course-list aria-label="Courses"></ul>
+          <p class="empty-state" data-course-empty>No courses yet. Add a course to organize your tasks.</p>
+        </section>
+        <section class="planner-panel" aria-labelledby="tasks-heading">
+          <div class="panel-heading"><div><p class="eyebrow">STAY ON TRACK</p><h2 id="tasks-heading">Assignments &amp; study tasks</h2></div></div>
+          <form class="task-form" data-task-form>
+            <div class="form-row">
+              <div><label for="task-title">Task</label><input id="task-title" name="title" required maxlength="120" placeholder="e.g. Review lecture notes"></div>
+              <div><label for="task-course">Course</label><select id="task-course" name="course"><option value="">General study</option></select></div>
+            </div>
+            <div class="form-row">
+              <div><label for="task-date">Due date</label><input id="task-date" name="due" type="date"></div>
+              <div><label for="task-priority">Priority</label><select id="task-priority" name="priority"><option value="Normal">Normal</option><option value="High">High</option><option value="Low">Low</option></select></div>
+            </div>
+            <button class="button" type="submit">Add task <span aria-hidden="true">+</span></button>
+          </form>
+          <div class="task-toolbar">
+            <div class="filter-tabs" role="group" aria-label="Filter tasks">
+              <button class="filter-tab active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-tab" type="button" data-filter="open" aria-pressed="false">To do</button>
+              <button class="filter-tab" type="button" data-filter="done" aria-pressed="false">Completed</button>
+            </div>
+            <button class="clear-button" type="button" data-clear-completed>Clear completed</button>
+          </div>
+          <ul class="task-list" data-task-list aria-label="Study tasks"></ul>
+          <p class="empty-state" data-task-empty>No tasks match this view. Add one above to get started.</p>
+        </section>
+      </div>
+      <p class="planner-footnote">Planner data is saved in this browser only. It is not synced across devices and may be removed if browser data is cleared.</p>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner">
+    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+    <p>Student portfolio and academic planner</p><p>© <span data-year></span> Ayodeji Teju-Ojo</p>
+  </div></footer>
+</body>
+</html>
