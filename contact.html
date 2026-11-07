@@ -10,42 +10,99 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
-    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="project.html">Projects</a></li>
-      <li><a href="resume.html">Résumé</a></li><li><a href="academic_planner.html">Planner</a></li>
-      <li><a class="nav-cta active" href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
-  </nav></header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="academic_planner.html">Planner</a></li>
+        <li><a class="nav-cta active" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main id="main">
     <section class="page-hero container">
-      <p class="eyebrow">CONTACT</p><h1>Let’s start a <span>conversation.</span></h1>
+      <p class="eyebrow">CONTACT</p>
+      <h1>Let’s start a <span>conversation.</span></h1>
       <p class="lead">I welcome thoughtful conversations about projects, collaboration, mentorship, and student opportunities.</p>
     </section>
+
     <section class="section container contact-layout">
       <div class="contact-copy">
         <h2>Tell me what you have in mind.</h2>
         <p>Use the form to prepare an email with a subject and message. Your email app will open so you can review and send it.</p>
-        <div class="contact-detail"><span class="feature-icon" aria-hidden="true">✉</span><div><span class="eyebrow">EMAIL</span><p class="contact-value">[Add your email address]</p></div></div>
-        <div class="contact-detail"><span class="feature-icon" aria-hidden="true">in</span><div><span class="eyebrow">LINKEDIN</span><p class="contact-value">[Add your LinkedIn profile]</p></div></div>
-        <div class="contact-detail"><span class="feature-icon" aria-hidden="true">⌘</span><div><span class="eyebrow">GITHUB OR PORTFOLIO</span><p class="contact-value">[Add your profile or project link]</p></div></div>
+
+        <div class="contact-detail">
+          <span class="feature-icon" aria-hidden="true">✉</span>
+          <div>
+            <span class="eyebrow">EMAIL</span>
+            <p class="contact-value">[Add your email address]</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="feature-icon" aria-hidden="true">in</span>
+          <div>
+            <span class="eyebrow">LINKEDIN</span>
+            <p class="contact-value">[Add your LinkedIn profile]</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="feature-icon" aria-hidden="true">⌘</span>
+          <div>
+            <span class="eyebrow">GITHUB OR PORTFOLIO</span>
+            <p class="contact-value">[Add your profile or project link]</p>
+          </div>
+        </div>
+
         <p class="small-note">Replace these prompts with your preferred public contact details.</p>
       </div>
-      <form class="contact-form" data-contact-form>
-        <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Name">
-        <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
-        <label for="subject">Subject</label><input id="subject" name="subject" required maxlength="120" placeholder="What would you like to discuss?">
-        <label for="message">Message</label><textarea id="message" name="message" rows="5" required maxlength="4000" placeholder="Write your message…"></textarea>
+
+      <form class="contact-form" data-contact-form novalidate>
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required
+               placeholder="Name" aria-describedby="name-error">
+        <p class="field-error" id="name-error" data-error-for="name" aria-live="polite"></p>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required
+               placeholder="you@example.com" aria-describedby="email-error">
+        <p class="field-error" id="email-error" data-error-for="email" aria-live="polite"></p>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"
+               required pattern="[0-9]+" placeholder="e.g. 08012345678"
+               aria-describedby="phone-error">
+        <p class="field-error" id="phone-error" data-error-for="phone" aria-live="polite"></p>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" required maxlength="120"
+               placeholder="What would you like to discuss?" aria-describedby="subject-error">
+        <p class="field-error" id="subject-error" data-error-for="subject" aria-live="polite"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required maxlength="4000"
+                  placeholder="Write your message…" aria-describedby="message-error"></textarea>
+        <p class="field-error" id="message-error" data-error-for="message" aria-live="polite"></p>
+
         <button class="button" type="submit">Prepare email <span aria-hidden="true">→</span></button>
-        <p class="form-note" data-form-note>This form opens your email app. It does not send or store messages.</p>
+        <p class="form-note" data-form-note aria-live="polite">This form opens your email app. It does not send or store messages.</p>
       </form>
     </section>
   </main>
-  <footer class="footer"><div class="container footer-inner">
-    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
-    <p>Student portfolio and academic planner</p><p>© <span data-year></span> Ayodeji Teju-Ojo</p>
-  </div></footer>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+      <p>Student portfolio and academic planner</p>
+      <p>© <span data-year></span> Ayodeji Teju-Ojo</p>
+    </div>
+  </footer>
 </body>
 </html>

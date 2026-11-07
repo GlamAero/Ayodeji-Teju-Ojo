@@ -10,61 +10,133 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
-    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-      <li><a class="active" href="project.html" aria-current="page">Projects</a></li>
-      <li><a href="resume.html">Résumé</a></li><li><a href="academic_planner.html">Planner</a></li>
-      <li><a class="nav-cta" href="contact.html">Contact</a></li>
-    </ul>
-  </nav></header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="project.html" aria-current="page">Projects</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="academic_planner.html">Planner</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main id="main">
     <section class="page-hero container">
       <p class="eyebrow">SELECTED WORK</p>
       <h1>Ideas, explored <span>in practice.</span></h1>
-      <p class="lead">Coursework, personal experiments, and collaborative work. Each entry should show the question, your contribution, and what changed because of the work.</p>
+      <p class="lead">Coursework, personal experiments, and collaborative work. Each entry shows the question, my contribution, and what changed because of the work.</p>
     </section>
+
     <section class="section container">
       <div class="project-grid">
         <article class="project-card">
-          <div class="project-visual visual-blue"><span>ACADEMIC · [YEAR]</span><b>Research<br>&amp; discovery</b></div>
+          <figure class="project-media">
+            <img
+              src="images/project-planner.png"
+              alt="Screenshot of the academic planner page showing summary cards and a task list"
+              width="640"
+              height="360"
+              loading="lazy"
+            >
+            <figcaption>Academic planner · [Year]</figcaption>
+          </figure>
           <div class="project-body">
-            <p class="eyebrow">[COURSE OR SUBJECT]</p><h2>[Research project title]</h2>
-            <p>[What question did you investigate? Summarize your approach, your contribution, the result, and one thing you learned.]</p>
-            <div class="tags"><span>[Subject]</span><span>[Method or tool]</span></div>
-            <p class="project-meta"><strong>My role:</strong> [Your contribution]</p>
+            <p class="eyebrow">WEB APPLICATION</p>
+            <h2>Academic Planner</h2>
+            <p>
+              A browser-based planner for university students. It allows the user
+              to add courses, create assignments with a due date and priority,
+              mark tasks complete, filter tasks by state, and delete tasks. Data
+              is saved in <code>localStorage</code> so the list is preserved
+              between visits on the same browser.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span></div>
+            <p class="project-meta"><strong>My role:</strong> Designed the interface, modelled the state, and implemented the add / complete / delete cycle.</p>
+            <p class="project-links">
+              <a href="academic_planner.html">Open live demo →</a>
+              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener">View repository →</a>
+            </p>
           </div>
         </article>
+
         <article class="project-card">
-          <div class="project-visual visual-green"><span>PERSONAL · [YEAR]</span><b>Designing<br>&amp; building</b></div>
+          <figure class="project-media">
+            <img
+              src="images/project-portfolio.png"
+              alt="Screenshot of the student portfolio homepage showing the hero section"
+              width="640"
+              height="360"
+              loading="lazy"
+            >
+            <figcaption>Responsive portfolio · [Year]</figcaption>
+          </figure>
           <div class="project-body">
-            <p class="eyebrow">INDEPENDENT PROJECT</p><h2>[Project or product name]</h2>
-            <p>[Who was it for? What problem did you notice? Explain what you made and how you evaluated the result.]</p>
-            <div class="tags"><span>[Skill]</span><span>[Tool or technology]</span></div>
-            <p class="project-meta"><strong>My role:</strong> [Your contribution]</p>
+            <p class="eyebrow">RESPONSIVE WEBSITE</p>
+            <h2>Student Portfolio</h2>
+            <p>
+              A multi-page responsive portfolio built with semantic HTML, external
+              CSS, Flexbox, CSS Grid, and JavaScript. It includes an about page,
+              project showcase, résumé, contact form, and academic planner. The
+              layout adapts to desktop, tablet, and mobile screens.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive design</span></div>
+            <p class="project-meta"><strong>My role:</strong> Designed the layout, wrote the HTML and CSS, and implemented shared JavaScript behaviour.</p>
+            <p class="project-links">
+              <a href="index.html">Open live demo →</a>
+              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener">View repository →</a>
+            </p>
           </div>
         </article>
+
         <article class="project-card">
-          <div class="project-visual visual-gold"><span>COLLABORATION · [YEAR]</span><b>Learning<br>together</b></div>
+          <figure class="project-media">
+            <img
+              src="images/project-contact.png"
+              alt="Screenshot of the contact form showing validation error messages below each field"
+              width="640"
+              height="360"
+              loading="lazy"
+            >
+            <figcaption>Contact form validation · [Year]</figcaption>
+          </figure>
           <div class="project-body">
-            <p class="eyebrow">TEAM OR COMMUNITY</p><h2>[Initiative or collaboration]</h2>
-            <p>[State the group goal, your responsibilities, and a result or lesson. Name collaborators and organizations where appropriate.]</p>
-            <div class="tags"><span>[Skill]</span><span>[Area of impact]</span></div>
-            <p class="project-meta"><strong>My role:</strong> [Your contribution] · <strong>With:</strong> [Team or organization]</p>
+            <p class="eyebrow">JAVASCRIPT FORM PROJECT</p>
+            <h2>Contact Form with Validation</h2>
+            <p>
+              A contact form that uses JavaScript to check for empty fields,
+              validate email format with a regular expression, and ensure the
+              phone number contains digits only. Accessible error messages are
+              shown inline, and the form prepares a draft email in the visitor’s
+              email application.
+            </p>
+            <div class="tags"><span>Forms</span><span>JavaScript validation</span><span>Accessibility</span></div>
+            <p class="project-meta"><strong>My role:</strong> Built the form, wrote the validation logic, and added accessible error messages.</p>
+            <p class="project-links">
+              <a href="contact.html">Open live demo →</a>
+              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener">View repository →</a>
+            </p>
           </div>
         </article>
       </div>
+
       <div class="callout">
         <p><strong>New to project work?</strong> A class assignment, small experiment, or volunteer contribution can make a strong entry when you explain your part and what you learned.</p>
         <a class="text-link" href="contact.html">Discuss a project <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container footer-inner">
-    <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
-    <p>Student portfolio and academic planner</p><p>© <span data-year></span> Ayodeji Teju-Ojo</p>
-  </div></footer>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="index.html" aria-label="Ayodeji Teju-Ojo, home">AT<span>.</span></a>
+      <p>Student portfolio and academic planner</p>
+      <p>© <span data-year></span> Ayodeji Teju-Ojo</p>
+    </div>
+  </footer>
 </body>
 </html>
